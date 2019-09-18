@@ -3,14 +3,21 @@
 **Description**: Python script to animate the normal modes found by the CP2K calculations
 
 **Author**: Salomé Llabrés Prat, PhD
+
 **Version**: 1.2
 
 **Dependencies**:
-- Python3 (argparse, numpy, itertools and collections)
+-  Python3 (argparse, numpy, itertools and collections)
 
 ---
 
-### Usage: 
+## About:
+
+**CP2K_normal_modes** is a Python3 script that reads the CP2K vibration molden output (.mol) and creates XYZ file for each vibration found by CP2K. 
+
+---
+
+## Usage: 
 
 ```javascript
 usage: animation_normal_modes_CP2K.py [-h] -i INPUT -o OUTPUT -f NFRAMES
@@ -29,7 +36,7 @@ optional arguments:
 
 ---
 
-### Output:
+## Output:
 
 ```javascript
 Number of atoms found: 24.
@@ -39,3 +46,10 @@ Read CP2K frequency file.
 
 Write multiple XYZ files for all the vibrations.
 ```
+
+
+---
+
+**To implement:**
+[ ] Write only selected vibrations. 
+
