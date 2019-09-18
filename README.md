@@ -47,10 +47,3 @@ Read CP2K frequency file.
 Write multiple XYZ files for all the vibrations.
 ```
 
-
----
-
-**To implement:**
-
-- [ ] Write only selected vibrations. 
-
