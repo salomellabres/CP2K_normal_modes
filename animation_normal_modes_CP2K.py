@@ -2,7 +2,12 @@
 import numpy as np
 from itertools import cycle
 from collections import namedtuple
+import argparse
 
+# Variables
+inp = ""
+out = ""
+iter = 10 
 
 # Functions
 def read_cp2k_molden_file(filename, natoms, title="NModes"):
@@ -150,19 +155,25 @@ def write_multiple_XYZ_file( filename, tup ):
     fout.close()
     
 
+def cp2k_parser():
+    parser = argparse.ArgumentParser(description="Read MOLDEN file and write a multiple XYZ for each vibration.")
+    parser.add_argument('-i', '--input', type=str, required=True, help="CP2K MOLDEN frequency MOL file.")
+    parser.add_argument('-o', '--output', type=str, required=True, help="Base name for the vibration output files.")
+    #parser.add_argument('-n', '--nvibrations', type=int, default=5, help="Number of vibrations to process. TO IMPLEMENT.")
+    parser.add_argument('-f', '--nframes', type=int, required=True, default=10, help="Number of frames to describe the vibrations.")
+    args = parser.parse_args()
 
-# Main
-nmodes = read_cp2k_molden_file("DA.TS.freq-VIBRATIONS-1.mol",  24)
-
-for i in range(69):
-    kk = generate_animation_normal_modes(nmodes, 0, 10)
-    write_multiple_XYZ_file("Vibrations/DA.vibrations"+str(i)+".xyz", kk)
-
-
-
-
-
-# In[ ]:
+    return args.input, args.output, args.nframes
 
 
+def main(inp, out, iter):   
+    nmodes = read_cp2k_molden_file(inp,  24)
+
+    for i in range(80):
+        kk = generate_animation_normal_modes(nmodes, 0, iter)
+        write_multiple_XYZ_file(out+str(i)+".xyz", kk)
+
+
+inp, out, iter = cp2k_parser()
+main(inp, out, iter )
 
