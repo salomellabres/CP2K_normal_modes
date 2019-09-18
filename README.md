@@ -5,10 +5,33 @@
 **Author**: Salomé Llabrés Prat, PhD
 
 **Dependencies**:
-- Python3 and jupyter notebook (numpy, itertools and collections)
+- Python3 (argparse, numpy, itertools and collections)
 
 ---
 
 ## Usage: 
+```javascript
+usage: animation_normal_modes_CP2K.py [-h] -i INPUT -o OUTPUT -f NFRAMES
 
-WIP
+Read MOLDEN file and write a multiple XYZ for each vibration.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        CP2K MOLDEN frequency MOL file.
+  -o OUTPUT, --output OUTPUT
+                        Base name for the vibration output files.
+  -f NFRAMES, --nframes NFRAMES
+                        Number of frames to describe the vibrations.
+```
+
+**Output**
+
+```javascript
+Number of atoms found: 24.
+Number of vibrations found: 69.
+
+Read CP2K frequency file.
+
+Write multiple XYZ files for all the vibrations.
+```
