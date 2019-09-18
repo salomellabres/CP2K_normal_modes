@@ -3,13 +3,15 @@
 **Description**: Python script to animate the normal modes found by the CP2K calculations
 
 **Author**: Salomé Llabrés Prat, PhD
+**Version**: 1.2
 
 **Dependencies**:
 - Python3 (argparse, numpy, itertools and collections)
 
 ---
 
-## Usage: 
+### Usage: 
+
 ```javascript
 usage: animation_normal_modes_CP2K.py [-h] -i INPUT -o OUTPUT -f NFRAMES
 
@@ -25,7 +27,9 @@ optional arguments:
                         Number of frames to describe the vibrations.
 ```
 
-**Output**
+---
+
+### Output:
 
 ```javascript
 Number of atoms found: 24.
