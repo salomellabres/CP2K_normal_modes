@@ -1,6 +1,6 @@
 # CP2K_normal_modes
 
-**Description**: Python script to animate the normal modes found by the CP2K calculations
+**Description**: Python script to animate the normal modes calculated in CP2K vibrational analysis. Adapts a MOLDEN output to a multiple PDB file.
 
 **Author**: Salomé Llabrés Prat, PhD
 
